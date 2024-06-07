@@ -1,0 +1,35 @@
+page{
+  background: #EBEBEB;
+}
+.titleImg {
+  display: block;
+}
+.content_left{
+  width: 520rpx !important;
+}
+.title{
+  min-width: 130rpx;
+  font-size: 32rpx;
+}
+.empty{
+  width: 100vw;
+  font-size: 32rpx;
+  text-align: left;
+}
+.theme{
+  width: 100%;
+}
+.split{
+  height:36rpx;
+}
+.c_txt {
+  color: #A0A0A0;
+}
+.adetailsImg{
+  margin-left: 26rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+.active:active{
+  background-color: #D9D9D9;
+}

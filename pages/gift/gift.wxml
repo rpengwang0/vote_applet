@@ -1,0 +1,63 @@
+<import src='/components/auth/authUser' />
+<template is="authUserInfo" data="{{auth,ani,playerInfo}}" />
+<view class="gift-container">
+  <view class="flex-column introduce" wx:if="{{true}}">
+    <image class="introduce-img" src="{{playerInfo.player_head_img + '?x-oss-process=image/crop,x_0,y_0,h_600'}}"/>
+    <view style="margin: 15rpx 0">{{playerInfo.player_name}}</view>
+    <view class="gift_top">{{playerInfo.ticket_num}}人气 <text> 排名：{{playerInfo.row_num}}</text></view>
+  </view>
+  <swiper indicator-active-color="#1e81f7" style="height: 732rpx;padding: 20rpx">
+    <block wx:key="index">
+      <swiper-item class="gift">
+        <!-- <view class="gift-item {{index == currentIndex ? 'gift-item-selected' : ''}}" data-index="0" bindtap="giftTab" >
+          <view class='gen'>
+            <image class="item-img" src="https://tp.meilidongli.cn/giftimg/dianzan.jpg" />
+          </view>
+          <view class="gift_text">点赞(1人气)</view>
+        </view> -->
+        <view wx:for="{{giftList}}" wx:key="index" bindtap="giftTab" class="gift-item {{index == currentIndex ? 'gift-item-selected' : ''}}" data-index="{{index}}">
+          <view class='gen'>
+            <image class="item-img" src="{{item.gift_img}}" />
+          </view>
+          <view class="gift_text">{{item.gift_name}}({{item.gift_ticket_num}}人气)</view>
+          <view class="gift_text">{{item.gift_price}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="pay_view">
+     <text>请选择数量</text>
+     <view class="stepper">  
+        <!-- 减号 -->  
+        <text class="sign {{num <= 1 ? 'disabled' : 'normal'}}" bindtap="delCount" data-index="{{index}}">-</text>  
+        <!-- 数值 -->  
+        <input class="number" type="number" bindchange="bindManual" value="{{num}}"  disabled="disabled"/>  
+        <!-- 加号 -->  
+        <text class="sign" bindtap="addCount" data-index="{{index}}">+</text>  
+     </view>  
+  </view>
+  <!-- <view class="pay-money">
+    支付: <text>{{priceAll}}</text>元
+  </view> -->
+  <view class="agree" bindtap='giftService'>
+    <icon type="success" size="16" color="#ccab69"></icon>
+    <text class="ty"> 我同意 <text style="color:#ccab69;">《投票协议》</text></text>
+  </view>
+  <view style="padding: 0 20rpx;margin-bottom:20rpx;">
+    <button class="gift-btn" disabled='{{false}}' bindtap="toPay">立即支持</button>
+  </view>
+  <!--中奖弹框-->
+  <view class="gifModel" wx:if="{{gifShow}}">
+    <image class="gif_bg" src="../../images/gif_bg.jpg" mode="aspectFit"></image>
+    <view class="gifContent">
+      <scroll-view class="gif_list" scroll-y="true">
+        <view class="prize_li" wx:for="{{gifArry}}" wx:key="index">
+            <image class="prize_img" src="{{item.gift_img}}"></image>
+            <view class="prize_text">{{item.gift_name}}</view>
+        </view>
+      </scroll-view>
+      <view class="prize_btn" bindtap="closeGif">知道了</view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,53 @@
+<!--activityFront.wxml 活动首页-->
+<import src='/components/auth/authUser' />
+<import src='/components/swiper/wheelImage.wxml' />
+<view class="container">
+    <template is="authUserInfo" data="{{auth,ani}}" />
+    <view class='header'>
+        <view class='sear' bindtap='goMeDetail'>
+            <image wx:if="{{loginFlag}}" src='{{userInfo.avatarUrl}}'></image>
+            <image wx:else src='/images/shequ_kong.png'></image>
+        </view>
+        <view class='search' style='flex:1'>
+            <icon type="search" color="#4c4c4c" size="14"></icon>
+            <input type="text" disabled='false' bindtap='activitySearch' placeholder="投票名称" placeholder-style="color:#999999" />
+        </view>
+    </view>
+
+    <view class='body'>
+        <!--<template is="goodsImage" data="{{wh,ht,imgUrls,prictureUrl}}" />-->
+        <!-- 4E8CEE -->
+        <view class='forumList'>
+            <view class="theme_center flex-row pt-10 mt-10">
+                <view class="leftLine"></view>
+                <view class="content_left">热门评选</view>
+            </view>
+            <view class='voteList'>
+                <block wx:for="{{activityList}}" wx:key="this">
+                    <view class='voteDetail' bindtap='detailTap' data-activityid="{{item.activity_id}}" data-title="{{item.activity_title}}" data-group="{{item.is_group}}">
+                        <view class='voteImg'>
+                            <image lazy-load mode='aspectFill' src='{{item.poster_img}}'></image>
+                        </view>
+                        <view class='voteInfo'>
+                            <view class='voteName line-2'>
+                                {{item.activity_title}}
+                            </view>
+                            <view class='voteTime'>
+                                <view class='flex-1'>活动评选</view>
+                                <view class='canyu'>{{item.sum_player}}人参赛</view>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+
+            <!--
+             <view class="vote_home_img">
+                <image src='/images/home_img.jpg'></image>
+            </view> -->
+        </view>
+        <view class='loadingBottm' wx:if="{{loading}}">
+            <image class='loadingImg' src='/images/loading.gif'></image>
+        </view>
+    </view>
+</view>

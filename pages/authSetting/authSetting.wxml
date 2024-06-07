@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="me_homepage">
+  <view class='menu_list flex-row mt-40'>
+    <view class="menu_text">
+       <button class='empty' open-type="openSetting">授权设置</button>
+    </view>
+  </view>
+</view>

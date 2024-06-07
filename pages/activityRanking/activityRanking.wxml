@@ -1,0 +1,58 @@
+
+<view class="vote_main">
+  <view class='container'>
+    <view class="ranking_content">
+      <view class="ranking_li rank_two">
+        <view class="ranking_header_img02">
+           <image src='{{playerArray[1].player_head_img?playerArray[1].player_head_img+"?x-oss-process=image/crop,x_0,y_0,h_600":""}}' class='first_img'></image>
+        </view>
+        <image src='/images/second.png' class='rank_img'></image>
+        <view class="ranking_info">
+          <text>{{playerArray[1].player_name}}{{playerArray[1].pro_name}}</text>
+          <text>{{playerArray[1].ticket_num}}</text>
+          <text>编号：{{playerArray[1].player_num}}</text>
+        </view>
+      </view>
+      <view class="ranking_li rank_one">
+        <view class="ranking_header_img">
+           <image src='{{playerArray[0].player_head_img?playerArray[0].player_head_img+"?x-oss-process=image/crop,x_0,y_0,h_600":""}}' class='first_img'></image>
+        </view>
+        <image src='/images/first.png' class='rank_img'></image>
+        <view class="ranking_info">
+          <text>{{playerArray[0].player_name}}{{playerArray[0].pro_name}}</text>
+          <text>{{playerArray[0].ticket_num}}</text>
+          <text>编号：{{playerArray[0].player_num}}</text>
+        </view>
+      </view>
+      <view class="ranking_li rank_two rank_three color">
+        <view class="ranking_header_img02">
+           <image src='{{playerArray[2].player_head_img?playerArray[2].player_head_img+"?x-oss-process=image/crop,x_0,y_0,h_600":""}}' class='first_img'></image>
+        </view>
+        <image src='/images/third.png' class='rank_img'></image>
+        <view class="ranking_info">
+          <text>{{playerArray[2].player_name}}{{playerArray[2].pro_name}}</text>
+          <text>{{playerArray[2].ticket_num}}</text>
+          <text>编号：{{playerArray[2].player_num}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="ranking_list">
+      <view class="ranking_header">
+        <view>排名</view>
+        <view>编号</view>
+        <view>参赛选手</view>
+        <view>人气</view>
+      </view>
+      <block wx:for="{{playerArray}}" wx:key="this">
+        <view class="ranking_item" wx:if="{{index>=3}}">
+          <text class="{{index<10?'color':''}}">{{index+1}}</text>
+          <text>{{item.player_num}}</text>
+          <text>{{item.player_name}}{{item.pro_name}}</text>
+          <text>{{item.ticket_num}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="copy">技术支持 东方梅雅科技有限公司</view>
+</view>

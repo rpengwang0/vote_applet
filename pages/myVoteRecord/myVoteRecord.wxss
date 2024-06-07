@@ -1,0 +1,99 @@
+.container {
+  background: rgb(240, 239, 244);
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  width: 100vw;
+  height: 30vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #4e8cee;
+}
+
+.body {
+  background: white;
+}
+
+.iconMentImg {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.menuText {
+  font-size: 28rpx;
+  margin-top: 24rpx;
+}
+
+.yue {
+  color: white;
+  font-size: 42rpx;
+}
+
+.wz {
+  color: white;
+  font-size: 28rpx;
+}
+
+.swiper-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: white;
+  border-bottom: 1px solid rgb(240, 239, 244);
+}
+
+.swiper-list {
+  padding: 22rpx 0;
+  width: 50vw;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.active {
+  color: #00B9FA;
+  border-bottom: 4rpx solid #00B9FA;
+}
+
+.mx-row {
+  display: flex;
+  flex-direction: row;
+  padding: 24rpx;
+  border-bottom: 1px solid rgb(240, 239, 244);
+  align-items: center;
+}
+
+.mx-title {
+  color: #666;
+  font-size: 28rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.t-Name {
+  font-size: 30rpx;
+  color: black;
+}
+
+.mx-jf {
+  color: black;
+  font-size: 30rpx;
+}
+
+.mx-hf {
+  color: #666;
+  font-size: 28rpx;
+}
+.jia{
+  color: red;
+  width: 108rpx;
+  text-align: right;
+}
+.jian{
+  color: green;
+  width: 108rpx;
+  text-align: right;
+}

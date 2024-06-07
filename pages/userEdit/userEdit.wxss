@@ -1,0 +1,30 @@
+page{
+  background: #EBEBEB;
+}
+.theme{
+  width: 100%;
+  background: #EBEBEB;
+}
+.theme_2{
+  border-bottom: 1rpx solid #4E8CEE;
+  padding:24rpx;
+}
+.content_right {
+  padding: 0;
+}
+.split{
+  height:36rpx;
+  background: #EBEBEB;
+}
+.c_txt {
+  color: black;
+  width: 100%;
+  font-size: 30rpx;
+}
+.c_txt2{
+  color: #A0A0A0;
+  font-size: 28rpx;
+}
+.moduleBlock{
+  width: 100vw;
+}

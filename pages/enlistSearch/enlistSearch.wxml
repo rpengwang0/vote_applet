@@ -1,0 +1,63 @@
+<view class="region_main">
+  <view class="region_list">
+     <radio-group class="radio-group" >
+        <block wx:for="{{reasonList}}" wx:key="index" wx:for-index="index">
+          <view class="reason-item">
+            <view class="reason-title text-flex" bindtap="openList" data-index="{{index}}" data-group="{{item.group_id}}">
+              <text>{{item.group_name}}</text>
+              <view class="region_flex">
+                <text>{{item.ticket_num}} 人气</text>
+                <view class="arrow-up {{item.open?'active':''}}" data-show="{{item.open}}">
+                  <image src="../../images/arrow_01.png"></image>
+                </view>
+              </view>
+            </view>
+            <view class="reason-list {{item.open?'show':''}}" data-show="{{item.open}}">
+              <view class="region_player">
+                 <view class="region_flex region_list_top">
+                    <view class="region_list_li region_flex">
+                       <image class="region_ranking_img" src="{{playerArray[0].player_head_img}}"></image>
+                       <view class="region_list_li_text">
+                          <text>第一名</text>
+                          <text>{{playerArray[0].player_name}}</text>
+                       </view>
+                    </view>
+                    <view class="region_list_li region_flex">
+                       <image class="region_ranking_img" src="{{playerArray[1].player_head_img}}"></image>
+                       <view class="region_list_li_text">
+                          <text>第二名</text>
+                          <text>{{playerArray[1].player_name}}</text>
+                       </view>
+                    </view>
+                    <view class="region_list_li region_flex">
+                       <image class="region_ranking_img" src="{{playerArray[2].player_head_img}}"></image>
+                       <view class="region_list_li_text">
+                          <text>第三名</text>
+                          <text>{{playerArray[2].player_name}}</text>
+                       </view>
+                    </view>
+                 </view>
+                 <view class="ranking_list">
+                  <view class="ranking_header">
+                    <view>排名</view>
+                    <!-- <view>编号</view> -->
+                    <view>参赛名称</view>
+                    <view>人气</view>
+                  </view>
+                  <block wx:for="{{playerArray}}" wx:key="this">
+                    <view class="ranking_item" wx:if="{{index>=3}}">
+                      <text class="{{index<10?'color':''}}">{{index+1}}</text>
+                      <!-- <text>{{item.player_id}}</text> -->
+                      <text>{{item.player_name}}</text>
+                      <text>{{item.ticket_num}}</text>
+                    </view>
+                  </block>
+                </view>
+              </view>
+              
+            </view>
+          </view>
+        </block>
+     </radio-group>
+  </view>
+</view>

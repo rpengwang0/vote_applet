@@ -1,0 +1,61 @@
+<!--forumSearch.wxml 社区论坛首页-->
+<view>
+  <view class="home__head">
+    <view class="home__head-search">
+      <image class="home__icon-search" src="/images/comm/icon-search.png"></image>
+      <input class="home__head-search-input" auto-focus placeholder="搜索投票" placeholderStyle="color:#D2D2D2;" value='{{inputValue}}' bindinput='inputTap' type="text"></input>
+    </view>
+    <view bindtap='cancelTap' class='cancel'>
+      取消
+    </view>
+  </view>
+  <view>
+    <view class='forumCircleList'>
+      <view class='forumPostView flex-column'>
+        <view>
+          <view class='flex-row'>
+            <view class='postImg'>
+              <image src="https://yy.eqlsoft.cn/Images/Activity/20196264130/1.png"></image>
+            </view>
+            <view class='flex-colum postDetail'>
+              <view class='line-clamp-2 forumTitle'>第一届投票活动</view>
+              <view class='flex-row fbzInfo'>
+                <view class='nick flex-1'>网鱼网咖</view>
+                <view>30参与者</view>
+              </view>
+              <view class='fmCreateTime flex-row'>
+                <view class='flex-1 line-clamp-1'>线上投票</view>
+                <view style='margin-left:24rpx;'>2019-06-30</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+    <view wx:if="{{false}}" class="load-more clearfix">
+      <view class="spinner fl">
+        <view class="spinner-container container1">
+          <view class="circle1"></view>
+          <view class="circle2"></view>
+          <view class="circle3"></view>
+          <view class="circle4"></view>
+        </view>
+        <view class="spinner-container container2">
+          <view class="circle1"></view>
+          <view class="circle2"></view>
+          <view class="circle3"></view>
+          <view class="circle4"></view>
+        </view>
+        <view class="spinner-container container3">
+          <view class="circle1"></view>
+          <view class="circle2"></view>
+          <view class="circle3"></view>
+          <view class="circle4"></view>
+        </view>
+      </view>
+      <view class="load-cont fl">加载中...</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<template name='wheelImage'>
+  <swiper indicator-dots="true" autoplay="true" circular="true" interval="4000" duration="1000" >
+    <block wx:for="{{4}}" wx:key="{{item.nid}}">
+      <swiper-item bindtap="sowingTap" data-index="{{index}}">
+        <!-- <image src="{{item}}" class="slide-image" style='width:100%;height:100%' /> -->
+        <ad unit-id="adunit-7298be6e897dc623"></ad>
+      </swiper-item>
+    </block>
+  </swiper>
+</template>
+<template name='goodsImage'>
+  <swiper indicator-dots="true" autoplay="true" circular="true" interval="4000" duration="1000" style="width:{{wh}}%;height:{{ht}}vw;">
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item bindtap="sowingTap" data-index="{{index}}">
+        <image  mode="aspectFill" data-src='{{item}}' src="{{item}}" class="slide-image" style='width:100%;height:100%' />
+      </swiper-item>
+    </block>
+  </swiper>
+</template>

@@ -1,0 +1,14 @@
+.types {
+  display: flex;
+  flex-direction: row;
+}
+.type{
+  padding:24rpx 0;
+  width: 17%;
+  font-size: 30rpx;
+  text-align: center;
+}
+.selection{
+  color: #4E8CEE;
+  border-bottom: 2px solid #4E8CEE;
+}

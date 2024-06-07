@@ -1,0 +1,9 @@
+<template name='detail'>
+  <view class="content">
+    <view class="detail">
+      <import src="../../wxmlify/wxmlify.wxml" />
+      <template is="wxmlify" data="{{nodes}}"></template>
+    </view>
+    <view class="copy">技术支持 东方梅雅科技有限公司</view>
+ </view>
+</template>

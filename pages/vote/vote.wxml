@@ -1,0 +1,136 @@
+<import src='/components/auth/authUser' />
+<import src='/components/swiper/wheelImage.wxml' />
+<import src='../activityDetail/activityDetail.wxml' />
+<import src='../activityEnlist/activityEnlist.wxml' />
+<view class="vote_main">
+    <view class="vote-banner">
+        <!-- <image bindtap='previewImage' class="vote-banner-img" mode="aspectFill" src="https://beiyong3.eqlsoft.cn/Upload/ActivityCMS/201911302149043811.jpg" /> -->
+        <view wx:if="{{imgUrls.length > 0}}">
+            <template is="goodsImage" data="{{wh,ht,imgUrls,prictureUrl}}" />
+        </view>
+        <view style="position:relative;" wx:if="{{videoUrl}}">
+            <view class="controls" hidden="{{videoImg}}">
+                <image src="{{videoBg}}"></image>
+            </view>
+            <view class="play" hidden="{{videoImg}}">
+                <image bindtap="bindplay" src="../../images/icon_1a.png"></image>
+            </view>
+            <video id="myVideo" class="myVideo" src="{{videoUrl}}" controls bindpause="bindpause"></video>
+        </view>
+    </view>
+    <!-------tab开始-------->
+    <view class="swiper-tab" style="margin-top:{{marginTop}}">
+        <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">大赛详情</view>
+        <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">参赛选手</view>
+        <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">人气排名</view>
+        <view class="swiper-tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="clickTab">奖项设置</view>
+        <view class="swiper-tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="clickTab" wx:if="{{regionShow}}">地区排名</view>
+    </view>
+    <!-------tab结束-------->
+    <!--大赛详情-->
+    <view class="vote_detail" wx:if="{{currentTab==0}}">
+        <template is="detail" data="{{nodes}}" />
+    </view>
+    <view wx:if="{{currentTab==1}}">
+        <view class="flex-center filter-search">
+            <view class="delete" hidden="{{delet}}" bindtap="deletValue">
+                <image class="close-img" src="/images/delet.png" mode="aspectFill" />
+            </view>
+            <view class="search_view">
+                <input type="search" value="{{valueShow}}" bindinput="search_clear" class="filter-ipt" placeholder="输入姓名" />
+                <view class="search_btn" bindtap="search">
+                    <image class="filter-icon" src="/images/comm/icon-search.png" />
+                </view>
+                <!-- <view class="search_btn group_btn" bindtap="gotoGroup" wx:if="{{has_group > 0}}">{{group_name ? group_name : '分组'}}</view> -->
+            </view>
+        </view>
+        <view class="flex-space-between vote-detail y_vote_top">
+            <view class="flex1 flex-column vote-detail-item">
+                <view>参赛人数</view>
+                <view class='_ct'>{{player_num > 0 ? player_num : activityInfo.sum_player}}</view>
+            </view>
+            <view class="flex1 flex-column vote-detail-item">
+                <view>总人气</view>
+                <view class='_ct'>{{ticket_num > 0 ? ticket_num : activityInfo.sum_ticket_num}}</view>
+            </view>
+            <view class="flex1 flex-column vote-detail-item">
+                <view>距离投票结束</view>
+                <view class='_ct' wx:if="{{countDown}}" style="font-size:24rpx;">{{day}}天{{hou}}时{{min}}分{{sec}}秒</view>
+                <view class='_ct' wx:else style="font-size:24rpx;">{{ticketFlag?'活动已结束':'活动未开始'}}</view>
+            </view>
+            <!-- <view class="flex1 flex-column vote-detail-item" bindtap="gotoGroup">
+        <view>分组</view>
+      </view> -->
+        </view>
+
+        <block wx:if="{{has_group > 0 && !group_id}}">
+            <view class="vote-content">
+                <view wx:for="{{reasonList}}" wx:key="index" class="flex-center content-item group_item">
+                    <view class="vote_img">
+                        <image class="content-img" lazy-load='{{true}}' data-group_id="{{item.group_id}}" mode="aspectFill" data-group_name="{{item.group_name}}" data-ticket_num="{{item.ticket_num}}" data-player_num="{{item.player_num}}" src="{{item.img}}" bindtap='gotoGroup'
+                        />
+                        <view class="content-num">排名：{{index+1}}</view>
+                        <view class="group_name group_name_big">{{item.group_name}}</view>
+                    </view>
+                    <view class="y_vote_info y_flex" style="position:relative;padding:32rpx 0 !important;">
+                        <!-- <text class="group_name">{{item.group_name}}</text> -->
+                        <text>人气：{{item.ticket_num}}</text>
+                        <text>参赛人数：{{item.player_num}}人</text>
+                    </view>
+                    <!-- <button class="vote-btn" bindtap='goToGfit' data-pid="{{item.player_id}}">支持她</button> -->
+                </view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="vote-content">
+                <block wx:if="{{playerArray.length>0}}">
+                    <view wx:for="{{playerArray}}" wx:key="index" class="flex-center content-item">
+                        <view class="vote_img">
+                            <view class="content-num-player">{{item.player_num}}号</view>
+                            <image class="content-img" lazy-load='{{true}}' data-pid="{{item.player_id}}" mode="aspectFill" src="{{item.thumb_img}}" bindtap='goToIntroduce' />
+                            <view class="content-num">排名：{{index+1}}</view>
+                        </view>
+                        <view class="y_vote_info y_flex" style="position:relative;">
+                            <text style="{{group_name ? 'padding-left:76rpx;' : ''}}">{{item.player_name}}</text>
+                            <text>{{item.ticket_num}}人气</text>
+                        </view>
+                        <view wx:if="{{group_name}}" class="group_name group_name_margin">{{group_name}}</view>
+                        <button class="vote-btn" bindtap='goToGfit' data-pid="{{item.player_id}}">支持她</button>
+                    </view>
+                </block>
+                <block wx:else>
+                    <view style="width:100%;text-align:center;padding:50rpx 0;">暂无用户报名参赛</view>
+                </block>
+                <view class="loadingPage" hidden="{{searchLoading}}">
+                    <text>{{loadMoreData}}</text>
+                    <image src="../../images/new/loading.gif" wx:if="{{searchLoadingImg}}"></image>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!--人气排名-->
+    <view class="vote_detail" wx:if="{{currentTab==2}}">
+        <include src="../activityRanking/activityRanking.wxml" />
+    </view>
+    <!--奖项设置-->
+    <view class="vote_detail" wx:if="{{currentTab==3}}">
+        <template is="prize" data="{{nodes}}" />
+        <!-- <include src="../activityEnlist/activityEnlist.wxml"/> -->
+    </view>
+    <!--地区排名-->
+    <view class="vote_detail" wx:if="{{currentTab==4}}">
+        <include src="../enlistSearch/enlistSearch.wxml" />
+    </view>
+
+    <view class='fixedView'>
+        <button class='subModule empty ' openType="share">
+            <view class='flex-column' style="margin-top:16rpx;">
+                <image src='/images/icon/iconZF.png'></image>
+                <view class='subView '>分享</view>
+            </view>
+        </button>
+    </view>
+    <view class='loadingBottm' wx:if="{{loading}}">
+        <image class='loadingImg' src='/images/loading.gif'></image>
+    </view>
+</view>

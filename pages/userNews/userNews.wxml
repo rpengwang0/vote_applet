@@ -1,0 +1,9 @@
+<view class='container'>
+  <view class='body'>
+    <view class='actList'>
+      <view class='kong'>
+        <image class='kong' src='/images/kong.png'></image>
+      </view>
+    </view>
+  </view>
+</view>

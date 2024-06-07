@@ -1,0 +1,15 @@
+<view class='split'>
+</view>
+<view class="theme">
+  <view class="theme_2">
+    <input class='content_right c_txt' maxlength='{{maxlength}}' focus='focus' value='{{inputValue}}' bindinput='inputValue'></input>
+  </view>
+  <view class="theme_2" style='border-bottom:0'>
+    <text class="content_right c_txt2">{{tip}}</text>
+  </view>
+</view>
+<view class='module_bottom'>
+  <view bindtap='success' class='moduleBlock'>
+    保存
+  </view>
+</view>

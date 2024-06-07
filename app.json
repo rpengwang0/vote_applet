@@ -1,0 +1,55 @@
+{
+    "pages": [
+        "pages/activityFront/activityFront",
+        "pages/login/login",
+        "pages/activityDetail/activityDetail",
+        "pages/errorInfo/errorInfo",
+        "pages/myVoteRecord/myVoteRecord",
+        "pages/activityEnlist/activityEnlist",
+        "pages/userNews/userNews",
+        "pages/activitySearch/activitySearch",
+        "pages/enlistSearch/enlistSearch",
+        "pages/activityRanking/activityRanking",
+        "pages/kefu/kefu",
+        "pages/userCollection/userCollection",
+        "pages/about/about",
+        "pages/userDetail/userDetail",
+        "pages/userEdit/userEdit",
+        "pages/userMore/userMore",
+        "pages/authSetting/authSetting",
+        "pages/myInfo/myInfo",
+        "pages/vote/vote",
+        "pages/introduce/introduce",
+        "pages/gift/gift",
+        "pages/group/index"
+    ],
+    "permission": {
+
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ccab69",
+        "navigationBarTitleText": "东方梅雅",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#808080",
+        "selectedColor": "#ccab69",
+        "backgroundColor": "#FCFCFC",
+        "list": [
+            {
+                "pagePath": "pages/activityFront/activityFront",
+                "selectedIconPath": "images/icon/iconMall3.png",
+                "iconPath": "images/icon/iconMall.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/myInfo/myInfo",
+                "selectedIconPath": "images/icon/iconMyInfo3.png",
+                "iconPath": "images/icon/iconMyInfo.png",
+                "text": "个人中心"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

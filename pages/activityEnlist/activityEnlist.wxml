@@ -1,0 +1,7 @@
+<template name='prize'>
+<view class="prize">
+     <import src="../../wxmlify/wxmlify.wxml" />
+     <template is="wxmlify" data="{{nodes}}"></template>
+     <view class="copy">技术支持 东方梅雅科技有限公司</view>
+</view>
+</template>

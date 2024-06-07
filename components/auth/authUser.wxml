@@ -1,0 +1,24 @@
+<template name='authUserInfo'>
+  <view wx:if="{{auth}}" style="animation-duration: 500ms" class='shadowContain animated {{ani ? "fadeInDown":"fadeOutDown"}}'>
+    <view class='popup'>
+      <view class='popupTiele'>欢迎来到开心可爱</view>
+      <view class='popupContent'>请授权信息，获得完整程序体验</view>
+      <view class='popupBtn'>
+        <button bindtap='authUserInfo_hide' class='empty'>取消</button>
+        <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" class='empty'>确定</button>
+      </view>
+    </view>
+  </view>
+</template>
+<template name='authPhone'>
+  <view wx:if="{{auth}}" style="animation-duration: 500ms" class='shadowContain animated {{ani ? "fadeInDown":"fadeOutDown"}}'>
+    <view class='popup'>
+      <view class='popupTiele'>欢迎来到开心可爱</view>
+      <view class='popupContent'>使用该功能需要获取您的手机号，请授权信息，获得完整程序体验</view>
+      <view class='popupBtn'>
+        <button bindtap='authUserInfo_hide' class='empty'>取消</button>
+        <button open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber' lang="zh_CN" class='empty'>确定</button>
+      </view>
+    </view>
+  </view>
+</template>

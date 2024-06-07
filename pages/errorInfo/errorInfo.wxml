@@ -1,0 +1,4 @@
+<!--pages/errorInfo/errorInfo.wxml-->
+<text>
+网络异常，请稍后重试
+</text>

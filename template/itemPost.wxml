@@ -1,0 +1,65 @@
+<template name="bottomBtn">
+    <view class="bottom">
+        <view bindtap="Fanhui" class="postBtn2">返回</view>
+        <view bindtap="bindFinish" class="postBtn">{{btnText}}</view>
+    </view>
+</template>
+<template name="joinSheet">
+    <view class="pSheetView">
+        <view animation="{{animShow}}" bindtap="hideJoinSheet" class="pSheetBg"></view>
+        <view animation="{{animMove}}" class="pSheet">
+            <view class="joinPanel">
+                <block wx:if="{{commonArr!='undefined'&&commonArr.length!=0}}">
+                    <view class="commonTip">常用报名项</view>
+                    <view class="commonInfo">
+                        <view bindtap="commonTap" class="commonItem" data-pindex="{{index}}" wx:for="{{commonArr}}"> {{item.property_name}} </view>
+                    </view>
+                </block>
+                <view class="commonTip">自定义填写项</view>
+                <view class="commonInfo">
+                    <view bindtap="customTap" class="commonOther" data-custom="text"> + 单行文本 </view>
+                    <view bindtap="customTap" class="commonOther" data-custom="text_long"> + 多行文本 </view>
+                    <view bindtap="customTap" class="commonOther" data-custom="single_vote"> + 单选问题 </view>
+                    <view bindtap="customTap" class="commonOther" data-custom="multi_vote"> + 多选问题 </view>
+                </view>
+            </view>
+            <view bindtap="hideJoinSheet" class="pSheetCancel">取消</view>
+        </view>
+    </view>
+</template>
+<template name="sheetAction">
+    <view class="pSheetView">
+        <view animation="{{animShow}}" bindtap="hideLocalSheet" class="pSheetBg"></view>
+        <view animation="{{animMove}}" class="pSheet">
+            <block wx:for="{{array}}">
+                <view bindtap="sheetAction{{index}}" class="pSheetTop" wx:if="{{index==0}}">{{item}}</view>
+                <view bindtap="sheetAction{{index}}" class="pSheetCenter" wx:elif="{{index>0&&index!=array.length-1}}">{{item}}</view>
+                <view bindtap="sheetAction{{index}}" class="pSheetBottom" wx:else>{{item}}</view>
+            </block>
+            <view bindtap="hideLocalSheet" class="pSheetCancel">取消</view>
+        </view>
+    </view>
+</template>
+<template name="partyTitle">
+    <view class="pTitle">
+        <label class="pTitleLabel">主题</label>
+        <view class="pTitleInput">
+            <input bindinput="changeTitleText" maxlength="35" placeholder="活动标题" placeholderStyle="color:#d9e1ea" type="text" value="{{title}}"></input>
+        </view>
+    </view>
+</template>
+<template name="partyPoster">
+    <view class="pPoster">
+        <view bindtap="addPoster" class="pAddPoster" wx:if="{{posterUrl==''}}">
+            <view class="dtSetupBtn">
+                <image src="http://cdn.hudongba.com/static_v4/images/icon/img_add_new_poster.png" style="width:69px;height:69px"></image>
+                <text>添加活动海报</text>
+            </view>
+        </view>
+        <view class="pShowPoster" wx:else>
+            <image bindtap="addPoster" class="btnEdit" src="https://cdn.hudongba.com/miniApp/editPoster.png"></image>
+            <image bindtap="deletePoster" class="btndelete" src="http://cdn.hudongba.com/static_v4/images/icon/img_delete_new_poster.png"></image>
+            <image src="{{posterUrl}}"></image>
+        </view>
+    </view>
+</template>

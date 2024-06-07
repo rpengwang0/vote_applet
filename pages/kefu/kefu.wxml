@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="me_homepage">
+  <!-- <view bindtap='playPhone' class='mt-40 menu_list flex-row'>
+    <view class="menu_text">
+      <view>拨打电话</view>
+    </view>
+  </view> -->
+  <view class='menu_list flex-row mt-20'>
+    <view class="menu_text">
+       <button class='empty' open-type="contact">在线客服</button>
+    </view>
+  </view>
+</view>

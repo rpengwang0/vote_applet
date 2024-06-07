@@ -1,0 +1,11 @@
+<template name='wheelType'>
+  <swiper indicator-dots="{{false}}" autoplay="{{false}}" interval="4000" duration="300" style="height:93rpx;" next-margin="40rpx">
+    <block wx:for="{{typeArray}}" wx:key="*this">
+      <swiper-item data-index="{{index}}">
+        <view class='types'>
+          <view wx:for="{{item}}" bindtap='typeTap' data-typeid="{{item.typeID}}" data-typename="{{item.typeName}}" wx:for-index="i2" data-index="{{(index*6)+i2}}" wx:key="{{item.typeID}}" class="type {{Tab==(index*6)+i2?'selection':''}}">{{item.typeName}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</template>

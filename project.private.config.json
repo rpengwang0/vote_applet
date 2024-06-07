@@ -1,0 +1,62 @@
+{
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "首页",
+          "pathName": "pages/activityFront/activityFront",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/activityFront/activityFront",
+          "pathName": "pages/introduce/introduce",
+          "query": "player_id=328",
+          "scene": null
+        },
+        {
+          "name": "pages/vote/vote",
+          "pathName": "pages/vote/vote",
+          "query": "activityId=6&has_group=1",
+          "scene": null
+        },
+        {
+          "name": "分组",
+          "pathName": "pages/group/index",
+          "query": "group_id=30&group_name=分组1&player_num=27&ticket_num=25401&has_group=1&activityId=6",
+          "scene": null
+        },
+        {
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "1111",
+          "pathName": "pages/group/index",
+          "query": "activityId=2&has_group=0",
+          "scene": null
+        },
+        {
+          "name": "pages/gift/gift",
+          "pathName": "pages/gift/gift",
+          "query": "pId=3&zan_num=1",
+          "scene": null
+        },
+        {
+          "name": "选手",
+          "pathName": "pages/introduce/introduce",
+          "query": "player_id=468&back=%2Fpages%2Fgroup%2Findex%3FactivityId%3D4%26has_group%3D0",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "voting_applet"
+}

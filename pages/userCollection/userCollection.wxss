@@ -1,0 +1,170 @@
+.container{
+  padding-bottom: 24rpx;
+}
+.header {
+  display: flex;
+  width: 100vw;
+  height: 40vw;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  position: relative;
+}
+
+.userDetail {
+  display: flex;
+  flex-direction: row;
+  margin-left: 24rpx;
+  position: absolute;
+  bottom: -75rpx;
+}
+
+.header-avatarUrl {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.header-avatarUrl image {
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 34rpx;
+  padding: 86rpx 0 0 16rpx;
+}
+.tj {
+  display: flex;
+  flex-direction: row;
+  color: #9a9eab;
+  align-items: center;
+  margin: 0 24rpx;
+  padding-bottom: 24rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.xiang {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 36rpx;
+}
+
+.xiang:first-child {
+  padding-right: 72rpx;
+  border-right: 1rpx solid #ddd;
+}
+
+.editDetail {
+  color: #4e8cee;
+  padding: 8rpx 18rpx;
+  border: 1rpx solid #4e8cee;
+  border-radius: 12rpx;
+}
+.editDetail:active {
+  color: #bfe5f9;
+}
+
+.jianjie {
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx 0 36rpx 0;
+  margin: 0 24rpx;
+}
+
+.jjTitle {
+  color: #9a9eab;
+  font-size: 24rpx;
+}
+
+.jjContent {
+  padding-top: 24rpx;
+}
+
+.weiF {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50%;
+}
+
+.txtBlue {
+  color: #0099e9;
+}
+
+.txtBlue:active {
+  color: #bfe5f9;
+}
+
+
+
+.bBSolid {
+  border-bottom: 1rpx solid #ececec;
+}
+.bBSolid:last-child{
+  border: 0 !important;
+}
+.activityInfo {
+  display: flex;
+  flex-direction: row;
+  margin: 12rpx 24rpx;
+  background-color: white;
+}
+.activityImg {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100%;
+}
+
+.activityCont {
+  margin: 0 0 0 16rpx;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.actTitle {
+  font-size: 32rpx;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
+.actAddress {
+  color: dimgray;
+  font-size: 28rpx;
+}
+
+.actInfo {
+  font-size: 26rpx;
+  color: #a0a0a0;
+  height: 40rpx;
+}
+.price {
+  display: flex;
+  flex: 1;
+}
+.actInfo2{
+  color: #4e8cee;
+  display: flex;
+  position: absolute;
+  bottom: 14rpx;
+  width: 100%;
+}
+.bmCount{
+  font-size: 24rpx;
+  border-radius: 12rpx;
+}
+.wdfb{
+  font-size: 32rpx;
+  padding: 14rpx 24rpx;
+  border-bottom: 1rpx solid #ddd;
+}

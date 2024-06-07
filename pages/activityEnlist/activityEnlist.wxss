@@ -1,0 +1,3 @@
+@import '/components/auth/authUser.wxss';
+.prize image{width:100%;}
+.prize{color:#333;font-size:24rpx;}

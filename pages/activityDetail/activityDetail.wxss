@@ -1,0 +1,9 @@
+@import '/components/auth/authUser.wxss';
+.detail image{width:100%;}
+.wxmlified-element.p{text-indent: 32rpx;padding-top:18rpx;}
+
+
+
+
+
+

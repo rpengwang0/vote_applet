@@ -1,0 +1,47 @@
+<!--myInfo.wxml 个人中心页面 -->
+<import src='/components/auth/authUser' />
+<view class='container'>
+  <view class='header'>
+    <view class='header-avatarUrl'>
+      <image wx:if="{{accountAuth}}" src='{{userInfo.avatarUrl}}'></image>
+      <image wx:else src='/images/shequ_kong.png' bindtap="login"></image>
+    </view>
+    <view class='header-info flex-1'>
+      <view class='info-name'>
+        <text wx:if="{{accountAuth}}">{{userInfo.nickName}}</text>
+        <text wx:else bindtap="login">未登录</text>
+      </view>
+      <!-- <view class='info-phone'>
+        <text>18888888888</text>
+      </view> -->
+    </view>
+    <view wx:if="{{!accountAuth}}" class='beginLogin' bindtap="login">
+    点击登录
+    </view>
+    <!-- <image wx:else class='you4' src='/images/icon/iconYou4.png'></image> -->
+  </view>
+  <view class='body'>
+    <view class='functionMenu'>
+      <template is="authUserInfo" data="{{auth,ani}}" />
+      <!--<view bindtap='myVoteRecord' class='fView-x'>
+        <view class='qian i1'></view>
+        <view>投票记录</view>
+        <image class='iconImg' src='/images/icon/iconYou.png'></image>
+      </view>
+      -->
+      <view bindtap='aboutTap' class='fView-x'>
+        <view class='qian i2'></view>
+        <view>关于我们</view>
+        <image class='iconImg' src='/images/icon/iconYou.png'></image>
+      </view>
+      <view bindtap='kfTap' class='fView-x'>
+        <view class='qian i5'></view>
+        <view>联系客服</view>
+        <image class='iconImg' src='/images/icon/iconYou.png'></image>
+      </view>
+    </view>
+    <!-- <view bindtap='out' class='outView'>
+    退出
+    </view> -->
+  </view>
+</view>

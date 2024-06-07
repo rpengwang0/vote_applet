@@ -1,0 +1,26 @@
+<view class="homepage">
+  <view class="header">
+    <view class="about-v">
+      <image mode='widthFix' src="/images/logo.png"></image>
+      <view class="userinfo-nickname">东方梅雅科技有限公司</view>
+      <view class="userinfo-version">Version 2.8.8</view>
+    </view>
+  </view>
+  <view style='background-color:white;'>
+    <view class='view-line flex-row;align-center'>
+      <text class='flex-1'>微信公号</text>
+      <text style='float:right'>东方梅雅</text>
+    </view>
+    <view class='view-line flex-row;align-center'>
+      <text class='flex-1'>企业邮箱</text>
+      <text style='float:right'>dfmy@biglamp.cn</text>
+    </view>
+    <view class='view-line flex-row;align-center'>
+      <text class='flex-1'>地址</text>
+      <text style='float:right'>北京市西城区</text>
+    </view>
+  </view>
+  <view class='footer' style='text-align:center;'>
+    <view style='font-size:26rpx;color:#666'>Copyright © 2018-2019 东方梅雅科技有限公司</view>
+  </view>
+</view>

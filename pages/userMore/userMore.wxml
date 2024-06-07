@@ -1,0 +1,36 @@
+<view class='split'>
+</view>
+<view class="theme">
+  <view bindtap='genderTap' class='active'>
+    <view class="theme_2">
+      <text class="title">性别</text>
+      <text class="content_right c_txt">{{gender[userInfo.gender]}}</text>
+    </view>
+  </view>
+  <view class='active'>
+    <picker mode="multiSelector" bindchange="bindPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="theme_2">
+        <text class="title">地区</text>
+        <view class="content_right c_txt">
+          {{userInfo.province}} {{userInfo.city}}
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class='active'>
+    <picker mode="date" value="{{userInfo.birthDate}}" start="1970-01-01" end="2018-12-31" bindchange="bindDateChange">
+      <view class="theme_2">
+        <text class="title">生日</text>
+        <view class="content_right c_txt">
+          {{userInfo.birthDate}}
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view class='active'>
+    <view bindtap='signatureTap' class="theme_2">
+      <text class="title">个性签名</text>
+      <text class="content_right c_txt">{{userInfo.signature}}</text>
+    </view>
+  </view>
+</view>

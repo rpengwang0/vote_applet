@@ -1,0 +1,31 @@
+<!--mySponsor.wxml 个人主办方页面-->
+<view class='split'></view>
+<view class='container'>
+  <view class='body'>
+    <view class='activityList'>
+      <view wx:if="{{sponsorArray.length>0}}">
+        <view data-index="{{index}}" bindtap='goDetail' class='bBSolid' wx:for="{{sponsorArray}}" wx:key="{{item.rownum}}">
+          <view class='activityInfo'>
+            <view>
+              <image class='activityImg' mode="aspectFill" src='{{ServiceUrl}}{{item.sponsorLogo}}'></image>
+            </view>
+            <view class='activityCont'>
+              <view class='actTitle line-1'>{{item.sponsorName}}</view>
+              <view class='actInfo line-1'>
+                {{item.sponsoDetail}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:if="{{!loading && sponsorArray.length==0}}" class='weiF'>
+        <text>您还没有关注过主办方</text>
+        <text bindtap='goPost' class='txtBlue'>去看看</text>
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{loading}}" class="load-more clearfix">
+    <image class='loadingImg' src='/images/loading.gif'></image>
+  </view>
+</view>

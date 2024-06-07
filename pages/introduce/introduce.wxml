@@ -1,0 +1,151 @@
+<import src='/components/auth/authUser' />
+<!-- <view class='split'></view> -->
+<template is="authUserInfo" data="{{auth,ani,playerInfo}}" />
+<view class="introduce-container">
+  <view class="introduce-card">
+    <!-- <image class="introduce-img-thum" mode='aspectFill' src="{{playerInfo.player_head_img}}" />
+    <view class="flex-column" style="align-items: flex-start">
+      <view class="mb-15 fwb" style="font-size: 34rpx;">{{playerInfo.group_name}}  {{playerInfo.player_name}}</view>
+      <view class="flex-column mt-15 align-left">
+        <view class="flex-row mt-5">
+          <text>人气:</text>
+          <view class="fwb color-10b19d">{{playerInfo.ticket_num}}</view>
+        </view>
+      </view>
+    </view> -->
+    <view class="introduce_header">
+      <view class="introduce_left">
+        <image src="../../images/icon/icon8.png" class="iocns"></image>
+        <text>{{playerInfo.player_num}}号</text>
+        <text>{{playerInfo.player_name}}{{playerInfo.pro_name}}</text>
+      </view>
+      <view class="introduce_left">
+        <image src="../../images/icon/icon9.png" class="iocns"></image>
+        <text>{{playerInfo.ticket_num}}</text>
+        <image src="../../images/icon/icon7.png" class="iocns"></image>
+        <text>{{playerInfo.row_num}}</text>
+      </view>
+    </view>
+    <view class="support" bindtap='toupiaoTap'>支持她</view>
+    <view class="introduce_img">
+      <video wx:if="{{playerInfo.small_video.length>0}}" autoplay="{{true}}"  class="introduce-img" src="{{playerInfo.small_video}}" ></video>
+      <image wx:else   class="introduce-img" mode="widthFix" src="{{playerInfo.player_head_img}}" />
+    </view>
+    <view class="support" bindtap='toupiaoTap'>支持她</view>
+    <!-- <view class="introduce_info">
+      <text>介绍</text>
+      <text>{{playerInfo.player_declaration}}</text>
+    </view> -->
+    <view class="support" bindtap="formSubmit">分享给朋友</view>
+  </view>
+  <view class="member_btn">
+    <view class="btn" bindtap="homeback">
+      <image src="../../images/home.png" class="home_icon"></image>
+      <view class="member_btn_txt">回到首页</view>
+    </view>
+    <view bindtap="formSubmit" class="btn">
+      <image src="../../images/picture.png" class="home_icon"></image>
+      <view class="member_btn_txt" >生成海报</view>
+    </view>
+  </view>
+  <view class="footer">本活动由
+    <text>东方梅雅科技有限公司</text> 提供技术支持</view>
+
+
+
+  <!-- <view class="list-card">
+    <view class="theme_center flex-row">
+      <view class="leftLine"></view>
+      <view class="content_left">选手介绍</view>
+    </view>
+    <view class="theme_center img-container">
+      <view>
+        <text style='color:#b1b1b1'>姓名：</text>
+        <text>{{playerInfo.player_name}}</text>
+      </view>
+    </view>
+    <view wx:if="{{false}}" class="theme_center flex-column">
+      <view class="theme_center flex-row">
+        <view class="leftLine"></view>
+        <view class="content_left">参赛视频</view>
+      </view>
+      <video src='视频地址' style='width:100%;height:60vw;margin-top:24rpx;'></video>
+    </view>
+    <view wx:if="{{false}}" class="theme_center flex-column">
+      <view class="theme_center flex-row">
+        <view class="leftLine"></view>
+        <view class="content_left">参赛音频</view>
+      </view>
+      <video src='音频地址' style='width:100%;height:60vw;margin-top:24rpx;'></video>
+    </view>
+    <view bindtap='previewImage' class="theme_center img-container flex-column">
+      <view class="theme_center flex-row">
+        <view class="leftLine"></view>
+        <view class="content_left">参赛照片</view>
+      </view>
+      <image class="introduce-img" mode="widthFix" src="{{playerInfo.player_person_img}}" />
+    </view>
+  </view> -->
+
+  <!-- <view class="list-card" wx:if="{{false}}">
+    <view class="theme_center flex-row">
+      <view class="leftLine"></view>
+      <view class="content_left">支持列表</view>
+    </view>
+    <view class="support-list" wx:if="{{giftList.length>0}}">
+      <view class='flex-row mb-20'>
+        <view class="avaImg">
+          <image mode="aspectFill" src="微信投票" />
+        </view>
+        <view class='liwu'>
+          <view style='fone-size:28rpx;'>xx用送给TA一个xx</view>
+          <view style='margin-top:10rpx;' class='color_f3'>时间</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class='support-list'>
+      <view class="activeNull flex-row mb-20 flex-center ">
+        <view class="txtBlack">暂无朋友赠送礼物</view>
+        <view bindtap="giftTap" class="txtBlue">支持一下</view>
+      </view>
+    </view>
+  </view> -->
+  <!-- <view bindtap="formSubmit">保存我</view> -->
+  <!--<canvas canvas-id="shareCanvas" style="position:absolute;width:{{canvasWidth}};height:{{canvasHeight}};left:{{canvasLeft}};"></canvas>
+  <image src='{{imagePath}}'></image>   -->
+
+
+  <view class='imagePathBox shareCanvas' hidden="{{maskHidden == false}}" style="height:{{windowHeight}}px;width:{{windowWidth}}px">
+    <image src="{{imagePath}}" class='shengcheng'></image>
+    <view class="share_btn">
+      <view class="share_head">分享
+        <view class="close" bindtap="close"><image src="../../images/close.png" class="close_img"></image></view>
+      </view>
+      <view class="share_box">
+        <view class="share_friend">
+        <button class="share_btn01" openType="share">
+          <image src="../../images/share01.png"></image>分享给好友
+        </button>
+        </view>
+        <view class='share_btn02' bindtap='baocun'>
+          <image src="../../images/share02.png"></image>
+          <text>保存图片</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view hidden="{{maskHidden == false}}" class="mask"></view>
+  <view class="canvas-box">
+    <canvas canvas-id="mycanvas" wx:if="{{maskHidden == true}}" class="canvas" style="position:absolute;width:{{windowWidth}}px;height:{{windowHeight-100}}px;left:{{canvasLeft}};"></canvas>
+  </view>
+
+</view>
+
+<!-- goActivityIndex -->
+<!-- <view class="flex-space-between more" wx:if="{{true}}">
+  <!-- <button class="flex-center more-btn" bindtap="toupiaoTap">投TA一票</button> -->
+<!-- <button class="flex-center more-btn" bindtap="goActivityIndex">返回</button> -->
+<!-- <button class="flex-center more-btn" openType="share">帮她拉票</button> -->
+<!-- <view class="flex-center more-btn" bindtap="formSubmit">帮她拉票</view>
+  <view bindtap='toupiaoTap'  class="flex-center more-vote">支持我</view> -->
+<!--</view> -->

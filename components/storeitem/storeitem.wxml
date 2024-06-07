@@ -1,0 +1,25 @@
+<import src='/components/star/star.wxml' />
+<template name='store'>
+  <navigator url="../details/details?deviceID={{store.DeviceID}}">
+    <view class='store'>
+      <image src="{{store.EquipImg[0]}}" class='eimg' mode="aspectFill"></image>
+      <view class='info'>
+        <view class='name' style='color:blue'>{{store.DeviceID_SS}}</view>
+        <view class='star_price'>{{store.position}}
+        </view>
+        <view class='tags_km'>
+          <view class='t_phone'>
+            <image src="/images/dingwei.png" style='width:14px;height:14px'></image>
+          </view>
+           {{store.distance}} km
+        </view>
+        <view class='tags_km'>
+          <view class='t_phone'>
+            <image src="/images/dianhua.png" style='width:15px;height:15px'></image> 
+            {{store.kfphone}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>

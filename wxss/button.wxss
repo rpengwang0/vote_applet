@@ -1,0 +1,29 @@
+/* 宽度、居中、颜色、字母间距 、背景颜色 */
+.btnBlueWhite{
+  width: 700rpx;
+  margin: 0 auto;
+  color: #fff;
+  letter-spacing: 5rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 30rpx;
+  background: #00B9FA;
+}
+/* 将一块view固定在底部，目前和按钮配合使用 */
+.fixedBottom{
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+  background: white;
+  padding: 24rpx 0;
+}
+.empty{
+  color: black;
+  line-height: 1.4;
+  padding: 0;
+  margin: 0;
+  background-color: Transparent;
+}
+.empty::after{
+  border: none;
+}

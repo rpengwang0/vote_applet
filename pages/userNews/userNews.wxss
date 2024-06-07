@@ -1,0 +1,281 @@
+
+.container{
+  min-height: 100vh;
+  background: #F5F5F5;
+}
+.swiper-tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.header{
+  background: white;
+  border-bottom: 1rpx solid #ddd;
+}
+.goodsTitle{
+  height: 80rpx;
+}
+.swiper-list {
+  padding: 22rpx 0;
+  width: 16vw;
+  text-align: center;
+  font-size: 26rpx;
+}
+
+.active {
+  color: #4E8CEE;
+  border-bottom: 6rpx solid #4E8CEE;
+}
+
+.iconImg {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+/*收藏商品*/
+.goodsList{
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 24rpx;
+}
+.goodsView {
+  width: 45%;
+  margin: 24rpx 2rpx 0rpx 24rpx;
+  height: 100%;
+  border-radius: 8rpx;
+  display: inline-block;
+  background: white;
+}
+.sonFirst {
+  width: 100%;
+  height: 45vw;
+}
+
+.sonSecond {
+  font-size: 10rpx;
+  padding: 5rpx 10rpx;
+}
+.si{
+  display: flex;
+  align-items: center;
+}
+.goodsImg {
+  width: 45vw;
+  height: 45vw;
+}
+.goodsTitle {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.goodsAss {
+  display: flex;
+  flex-direction: row;
+  align-items:baseline;
+  color: #666;
+}
+.goodsAss text:nth-child(1){
+  color: red;
+  font-size: 28rpx;
+}
+.fz-24{
+  font-size: 24rpx;
+}
+.goodsAss view text:nth-child(2){
+  text-decoration: line-through;
+}
+
+/*收藏帖子*/
+.iconImg2 {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 0;
+  margin-left: 12rpx;
+}
+
+
+.home__hot {
+  padding: 0 24rpx;
+  border-bottom: 1rpx solid #ddd;
+  background: white;
+}
+
+.home__hot-item {
+  padding: 25rpx 0;
+  position: relative;
+}
+
+.fc_1{
+  margin: 10rpx 0;
+  color: #a0a0a0;
+}
+.home__hot-title {
+  font-size: 33rpx;
+  color: black;
+  font-weight: bold;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.home-image-list {
+  display: inline;
+  position: relative;
+}
+
+.imagecount {
+  position: absolute;
+  right: 0rpx;
+  bottom: 12rpx;
+  background-color: black;
+  color: white;
+  font-size: 20rpx;
+  padding: 7rpx 14rpx 7rpx 14rpx;
+}
+
+.home__hot-info {
+  font-size: 28rpx;
+  padding-top: 8rpx;
+  color: #b2b2b2;
+  line-height: 40rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap !important;
+  max-width: 100%;
+}
+
+.home__hot-icon_hot {
+  color: #fd5f5d;
+  padding: 0 12rpx;
+}
+
+.home__hot-icon_hot:after {
+  border: 2rpx solid #fd5f5d;
+}
+
+
+.home__hot-image-big {
+  border-radius: 8rpx;
+  margin: 15rpx 0 10rpx 0;
+  width: 65%;
+}
+
+.home__hot-image-small {
+  border-radius: 8rpx;
+  width: 21vw;
+  height: 21vw;
+  margin: 0 20rpx 0 0;
+}
+
+.home__hot-image-small:last-child {
+  margin-right: 0rpx;
+}
+
+
+.home_bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 6rpx;
+}
+
+.home__hot-content, .forumtypename {
+  color: #a0a0a0;
+}
+.sl {
+  color: #a0a0a0;
+}
+
+/*活动收藏*/
+.actList{
+  width: 100%;
+  display: inline-block;
+  text-align:center;
+  border-top: 1px solid #EEEEEE;
+}
+.actList{
+  text-align: left;
+}
+.actView {
+  width: 327rpx;
+  /* 19rpx 26rpx 20rpx 26rpx */
+  padding: 24rpx;
+  display: inline-block;
+  background: white;
+}
+.actView:nth-child(odd) {
+  border-right: 1px solid #EEEEEE;
+}
+.actView {
+  border-bottom: 1px solid #EEEEEE;
+}
+
+
+.actFirst{
+  width: 327rpx;
+  height: 327rpx;
+}
+.actFirst {
+  font-size: 10rpx;
+}
+.si{
+  display: flex;
+  align-items: center;
+}
+.actImg {
+  width: 100%;
+  height: 100%;
+  border-radius:10rpx;
+}
+.actName{
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.actTitle {
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 39rpx;
+  display: flex;
+  align-items: center;
+  color: #666666;
+}
+.actTitle image{
+  margin-right: 5rpx;
+}
+.actAss {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22rpx;
+  color: #666;
+  text-align: left;
+}
+.actAss text:nth-child(1){
+  color: red;
+}
+
+/*为空时的图片*/
+.kong {
+  width: 100vw;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.kong image {
+  width: 220rpx;
+  height: 220rpx;
+}

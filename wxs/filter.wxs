@@ -1,0 +1,18 @@
+var indexOf = function (value, searchvalue) {
+  if (value.indexOf(searchvalue)>-1){
+    return true
+  }else{
+    return false
+  }
+}
+var moneyFormat = function (money) {
+  return money.toFixed(2);
+}
+
+/*
+ * 导出
+ */
+module.exports = {
+  indexOf: indexOf,
+  moneyFormat: moneyFormat
+}

@@ -1,0 +1,53 @@
+<!--myIntegral.wxml 个人钱包积分界面-->
+<view class='container'>
+  <view class='body'>
+    <view class="swiper-tab">
+      <view class="swiper-list {{Tab=='1' ? 'active' : ''}}" data-current="1" bindtap="swichNav">投票明细</view>
+      <view class="swiper-list {{Tab=='2' ? 'active' : ''}}" data-current="2" bindtap="swichNav">礼物明细</view>
+    </view>
+    <view class='mx-row' wx:if="{{!loading}}">
+      <view class='mx-title'>
+        <text>名称/时间</text>
+      </view>
+      <view class='mx-hf'>
+        <text>支出（人民币）</text>
+      </view>
+    </view>
+    <view wx:if="{{!loading}}">
+      <view class='mx-row'>
+        <view class='mx-title'>
+          <text class='t-Name line-1'>默认活动</text>
+          <text class='t-Time line-1' wx:if="{{item.voteType==1}}">投给1号选手1票</text>
+          <text class='t-Time line-1' wx:else>赠送1号选手礼物“火箭”</text>
+          <text class='t-Time'>2019-12-05 00:20</text>
+        </view>
+        <view class='mx-jf jian'>
+          <text>0</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{loading}}" class="load-more clearfix">
+    <view class="spinner fl">
+      <view class="spinner-container container1">
+        <view class="circle1"></view>
+        <view class="circle2"></view>
+        <view class="circle3"></view>
+        <view class="circle4"></view>
+      </view>
+      <view class="spinner-container container2">
+        <view class="circle1"></view>
+        <view class="circle2"></view>
+        <view class="circle3"></view>
+        <view class="circle4"></view>
+      </view>
+      <view class="spinner-container container3">
+        <view class="circle1"></view>
+        <view class="circle2"></view>
+        <view class="circle3"></view>
+        <view class="circle4"></view>
+      </view>
+    </view>
+    <view class="load-cont fl">正在努力为你加载更多...</view>
+  </view>
+</view>

@@ -1,0 +1,109 @@
+/* 包裹住列表的最外层 */
+.theme {
+  width: 99%;
+  margin: 0 auto;
+  background: #fff;
+}
+/* 包裹行的 */
+.theme_1 {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 26rpx;
+  background: #fff;
+  border-bottom: 1px solid rgb(240, 239, 244);
+}
+.theme_2 {
+  display: flex;
+  align-items: center;
+  padding: 28rpx 0;
+  margin: 0 26rpx;
+  border-bottom: 1px solid rgb(240, 239, 244);
+}
+/* 行的b标题，比如姓名、邮箱等等 */
+.title {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  font-size: 28rpx;
+}
+/* 行对应的内容居右 
+*/
+.content_right {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 28rpx;
+  padding: 0 0 0 15rpx;
+}
+/* 行对应的内容居左 */
+.content_left {
+  display: flex;
+  align-items: center;
+  width: 616rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.theme_center {
+  display: flex;
+  align-items: center;
+  width: 698rpx;
+  padding: 24rpx 0rpx;
+  margin: auto;
+  border-bottom: 1px solid rgb(240, 239, 244);
+}
+/* 底部模块 */
+.module_bottom{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  bottom: 0px;
+  text-align: center;
+  background-color: white;
+  height: 94rpx;
+  z-index: 1;
+}
+.moduleBlock{
+  width: 36vw;
+  margin: auto;
+  background: #4e8cee;
+  color: white;
+  padding: 28rpx 0;
+  font-size: 30rpx;
+}
+.subModule{
+  width: 21vw;
+  padding: 15rpx 0;
+  border-top: 1px solid rgb(240, 239, 244);
+  border-left: 1px solid rgb(240, 239, 244);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.subImg{
+  width: 32rpx;
+  height: 32rpx;
+}
+.subView{
+  font-size: 28rpx;
+}
+
+
+.controlMenu {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+}
+.controlItem{
+  display: flex;
+  flex-direction: column;
+}
+.controlImg {
+  width: 14vw;
+  height: 14vw;
+  margin:auto;
+}
+.controlTxt{
+  text-align: center;
+}

@@ -1,0 +1,120 @@
+.home__head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 24rpx 0 12rpx 0;
+  border-bottom: 1rpx solid #ddd;
+}
+.address{
+  margin-left:24rpx;
+}
+.iconImg{
+  margin: 0;
+  width: 28rpx;
+  height: 28rpx;
+}
+.home__head-search {
+  position: relative;
+  -webkit-box-flex: 1;
+  margin-left: 24rpx;
+  flex: 1;
+  background-color: rgb(240, 239, 244);
+  border-radius: 8rpx;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 56rpx;
+}
+
+.home__icon-search {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  left: 14rpx;
+  top: 14rpx;
+}
+
+.home__head-search-input {
+  margin-left: 56rpx;
+  color: #222;
+  font-size: 24rpx;
+  -webkit-box-flex: 1;
+  flex: 1;
+  height: 56rpx;
+  line-height: 56rpx;
+}
+
+.cancel {
+  color: #4e8cee;
+  margin: 0 24rpx;
+}
+
+.title {
+  padding: 36rpx 0 24rpx 0;
+  margin: 0 0 0 24rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #ddd;
+}
+.forumType{
+  align-items: center;
+  padding: 24rpx 24rpx 24rpx 0 ;
+  margin: 0 0 0 24rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.forumType:last-child{
+  border:0
+}
+.forumTypeImg {
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 24rpx;
+}
+.forumTypeImg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.forumTypeName{
+  font-size: 30rpx;
+}
+.forumRD{
+  margin-top: 12rpx;
+  font-size: 28rpx;
+  color: #a0a0a0;
+}
+.forumTitle{
+  font-size: 30rpx;
+}
+.fmCreateTime{
+  margin-top: 12rpx;
+}
+.fbzInfo,.fmCreateTime{
+  color: #a0a0a0;
+}
+.forumPostView:last-child{
+  border:0
+}
+.forumPostView{
+  padding: 24rpx 24rpx 24rpx 0 ;
+  margin: 0 0 0 24rpx;
+  margin-left:24rpx;
+  border-bottom: 1rpx solid #ddd;
+}
+.postImg {
+  width: 130rpx;
+  height: 130rpx;
+  margin-right: 24rpx;
+}
+.postImg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.postDetail{
+  width: 548rpx;
+}

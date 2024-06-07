@@ -1,0 +1,86 @@
+.store {
+  background-color: #fff;
+  margin-top: 2px;
+  padding: 25rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+}
+
+.store .eimg {
+  width: 190rpx;
+  height: 190rpx;
+  flex-shrink: 0;
+  margin-left:20px;
+  border-radius: 50%;
+}
+
+.store .info {
+  height: 180rpx;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rpx;
+  margin-left: 10rpx;
+  overflow: hidden;
+}
+
+.store .info .name {
+  color: #111;
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.store .info .star_price {
+  color: #111;
+  font-size: 26rpx;
+  padding-right: 10px
+}
+
+.store .info .star_price .star-rating {
+  display: inline-block;
+  margin-right: 6rpx;
+}
+
+.store .info .tags_km {
+  display: flex;
+  flex-direction: row;
+  color: #777;
+  font-size: 12px;
+  flex-wrap: nowrap;
+}
+
+.tags_km .km {
+  flex: 1;
+  text-align: right;
+}
+.t_phone{
+  display: flex;
+  align-items: center
+}
+
+.tags_km .tags {
+  border: 1px solid;
+  padding: 0px 4px;
+  border-radius: 4px;
+}
+
+.tags_km .tag1 {
+  color: red;
+  border-color: red;
+}
+
+.tags_km .tag2 {
+  margin-left: 4px;
+  color: #f99b15;
+  border-color: #f99b15;
+}
+
+.house_llsc {
+  font-family: '黑体';
+  font-size: 12px;
+}

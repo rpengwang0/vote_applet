@@ -1,0 +1,83 @@
+@import '/components/auth/authUser.wxss';
+page {
+  width: 100%;
+  height: 100%;
+}
+.gift-container {
+  width: 100%;
+  height: 100%;
+}
+.introduce {
+  width: 100%;
+  height: 310rpx;
+  background: linear-gradient(#ccab69, #c19132);
+  /* background:#ccab69; */
+  color: #fff;
+  font-weight: bold;
+}
+.introduce-img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+}
+.gift {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+.gift-item {
+  width: 33%;
+  height: 240rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #999;
+}
+.gen{position: relative;}
+.gift-item-selected {border: 2rpx solid #ccab69;}
+.piaoshu {
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+  background: #888;
+  padding: 4rpx 0 4rpx 16rpx;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22rpx;
+}
+.item-img {width: 140rpx;}
+.item-img {width: 162rpx;height: 162rpx;margin-bottom: 10rpx;}
+.pay-money {border-bottom: 2rpx solid #eee;padding:24rpx 20rpx;color: #999;margin: 0 20rpx;}
+.deal {align-items: center;padding-left: 20rpx;margin-top: 30rpx;}
+.gift-btn {background: #ccab69;color: #fff;margin-top: 20rpx;font-size: 30rpx;}
+.agree {display: flex;height: 40rpx;margin: 24rpx 0 24rpx 24rpx;font-size: 28rpx;color: #666;position: relative;}
+.agree icon {position: absolute;top: 0;left: 0;}
+.agree .ty {position: absolute;font-size: 26rpx;top: -1rpx;left: 40rpx;}
+.gift-item .gift_text{color:#333;font-size:24rpx;}
+.gift-item .gift_text:nth-child(3){color:#ccc;}
+.pay_view{display: flex;justify-content: space-between;height:120rpx;border-top:1rpx solid #eee;border-bottom:1rpx solid #eee;
+margin:0 20rpx;align-items: center;padding:0 20rpx;}
+.stepper {width:250rpx;height: 72rpx;border-radius: 3rpx;-webkit-border-radius: 3rpx;background: #fff;}   
+.stepper .sign {width: 74rpx;line-height: 72rpx;text-align: center;float: left;color:#fff;background:#ccab69;font-size:40rpx;}   
+.stepper .number {width: 102rpx;  height: 68rpx;float: left;  margin: 0 auto; text-align: center;font-size: 28rpx;color: #ccab69;
+background:#fff;border-top:2rpx solid #ccab69;border-bottom:2rpx solid #ccab69;} 
+.stepper .disabled{color: #ccc;}  
+.pay-money text{color:#ccab69;font-size:34rpx;padding-right: 10rpx;}
+.gift_top text{padding-left:15rpx;}
+
+
+/***开奖结果**/
+.gifModel{width:100%;height:100%;position: fixed;left:0;top:0rpx;background: rgba(0, 0, 0, 0.3);display: flex;justify-content: center;align-items: center;
+  z-index: 100;}
+.gifModel .gif_bg{width:100%;height:97vh;margin:0 33rpx;}
+.gifContent{width:70%;position: absolute;top:40%;}
+.gif_list{max-height: 465rpx;}
+.prize_li{display: flex;align-items: center;padding:0 30rpx;}
+.prize_li .prize_img{width:80rpx;height: 80rpx;flex-shrink: 0;margin-right:20rpx;}
+.prize_li .prize_text{color:#333;font-size: 28rpx;}
+.gifModel .prize_btn{width:350rpx;height:82rpx;background:#a81800;color:#fdf1a7;font-size:32rpx;text-align: center;line-height:82rpx;margin:30rpx auto 20rpx;
+border-radius:8rpx;}

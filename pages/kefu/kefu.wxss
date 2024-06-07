@@ -1,0 +1,62 @@
+/**index.wxss**/
+.me_homepage {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  font-family: '华文细黑' !important;
+}
+view{
+  font-size: 35rpx;
+}
+.menu_line{
+  width: 100%;
+  background-color: white;
+}
+.empty{
+  width: 100vw;
+  font-size: 35rpx;
+  text-align: left;
+}
+.userAvatar{
+  width: 64px;
+  height: 64px;
+  margin: 8px 8px 8px 13px;
+}
+.userNick{
+  display: flex;
+  justify-content: center;
+}
+.block{
+  background-color: white;
+}
+.menu_list{
+  width: 100%;
+  padding: 0 15px;
+  align-items: center;
+  background-color: white;
+  border-top: 1px solid #ebebeb
+}
+.menu_Son{
+  width:93%;
+  align-items: center;
+  border-top: 1px solid #ebebeb
+}
+.menu_img{
+  width: 27px;
+  height: 27px;
+}
+.menu_img{
+  margin: 10px 20px 10px 0;
+  justify-content: center;
+}
+.menu_text{
+  justify-content: center;
+  padding: 10px 0
+}
+.menu_img image{
+  width: 100%;
+  height: 100%;
+}

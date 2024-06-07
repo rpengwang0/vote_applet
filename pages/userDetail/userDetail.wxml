@@ -1,0 +1,41 @@
+<view class='split'>
+</view>
+<view class="theme">
+  <view bindtap='UpdateImg' class='active'>
+    <view class="theme_2">
+      <text class="title">头像</text>
+      <view class="content_right">
+        <image  src='https://wx.qlogo.cn/mmopen/vi_32/WBNefBKwicmqcVC1AgyM7Smm1tebYUibTib2gvsEFCc4FZiaKxwYl5iaN3H30AHeVzlR7kGUSYPgwrtOPVAGC6PvSaA/132?2019630161627' class='adetailsImg'></image>
+      </view>
+    </view>
+  </view>
+  <view class='active' bindtap='userEdit'>
+    <view class="theme_2">
+      <text class="title">昵称</text>
+      <text class="content_right c_txt">海里</text>
+    </view>
+  </view>
+  <view class='active'>
+    <view class="theme_2">
+      <text class="title">手机号</text>
+      <text class="content_right c_txt">18866890651</text>
+    </view>
+  </view>
+  <!-- <view class='active'>
+    <view class="theme_2">
+      <text class="title">手机号</text>
+      <text class="content_right c_txt">{{userInfo.AccountNumber}}</text>
+    </view>
+  </view> -->
+  <view class='active'>
+    <view class="theme_2">
+       <button class='empty' open-type="openSetting">设置</button>
+    </view>
+  </view>
+  <view class='split'></view>
+  <view class='active' bindtap='userMore'>
+    <view class="theme_2">
+      <text class="title">更多</text>
+    </view>
+  </view>
+</view>

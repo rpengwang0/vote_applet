@@ -1,0 +1,123 @@
+{
+  "description": "项目配置文件",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": true,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": true,
+    "checkInvalidKey": true,
+    "checkSiteMap": false,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": true,
+    "useApiHook": true,
+    "useApiHostProcess": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": false,
+    "useCompilerModule": false,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.8.3",
+  "appid": "wxf050f9ca80c58106",
+  "projectname": "%E4%B8%9C%E6%96%B9%E6%A2%85%E9%9B%85",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "首页",
+          "pathName": "pages/activityFront/activityFront",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 1,
+          "name": "pages/activityFront/activityFront",
+          "pathName": "pages/introduce/introduce",
+          "query": "player_id=328",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "pages/vote/vote",
+          "pathName": "pages/vote/vote",
+          "query": "activityId=6&has_group=1",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "分组",
+          "pathName": "pages/group/index",
+          "query": "group_id=30&group_name=分组1&player_num=27&ticket_num=25401&has_group=1&activityId=6",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/login/login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 5,
+          "name": "1111",
+          "pathName": "pages/group/index",
+          "query": "activityId=2&has_group=0",
+          "scene": null
+        },
+        {
+          "name": "pages/group/index",
+          "pathName": "pages/group/index",
+          "query": "activityId=3&has_group=0",
+          "scene": null
+        },
+        {
+          "id": 7,
+          "name": "pages/gift/gift",
+          "pathName": "pages/gift/gift",
+          "query": "pId=3&zan_num=1",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

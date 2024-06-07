@@ -1,0 +1,48 @@
+.shadowContain{
+  width: 100vw;
+  height: 100vh;
+  position:fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .5);
+  z-index: 100; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.popup{
+  background: white;
+  padding: 40rpx;
+  border-radius: 15rpx;
+  width: 80%;
+  margin-bottom: 40rpx;
+}
+.popupTiele{
+  font-weight: bold;
+  font-size: 34rpx;
+}
+.popupContent{
+  font-size: 28rpx;
+  margin: 36rpx 0;
+}
+.popupBtn{
+  display: flex;
+  flex-direction: row;
+}
+.popupBtn button{
+  font-size: 30rpx;
+  width: 50%;
+}
+.popupBtn button:first-child{
+  border-right: 1rpx solid rgb(233, 233, 233);
+  color: rgb(104, 96, 96)
+}
+.popupBtn button:first-child:active{
+  font-weight: bold;
+}
+.popupBtn button:last-child:active{
+  font-weight: bold;
+}
+.popupBtn button:last-child{
+  color: #4e8cee;
+}
